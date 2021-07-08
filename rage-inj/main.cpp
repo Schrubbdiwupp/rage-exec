@@ -30,6 +30,8 @@ DWORD GetProcessId()
 
 int main()
 {
+	CreateDirectoryA("C:\\rage-exec", NULL);
+
 	std::ifstream src("multiplayerL.dll", std::ios::binary);
 
 	if (src.fail())
