@@ -11,7 +11,7 @@ Navigate to the cloned folder and open `rage-exec.sln` with Visual Studio, and b
 ## Requirements
 
 1) RAGE Multiplayer installed at **C:/RAGEMP**
-2) Older **multiplayerL.dll** in the same directory as **rage-inj.exe** (Download: [_link_])
+2) Older **multiplayerL.dll** in the same directory as **rage-inj.exe** (Download: [multiplayerL.dll](https://www.unknowncheats.me/forum/downloads.php?do=file&id=33827))
 3) File(s) to execute at **C:/rage-exec**
 
 ## Usage
