@@ -1,5 +1,4 @@
 #include "Injection.h"
-#include "Segment.h"
 #include <filesystem>
 #include <iostream>
 #include <string>
@@ -31,8 +30,17 @@ DWORD GetProcessId()
 
 int main()
 {
+	std::ifstream src("multiplayerL.dll", std::ios::binary);
+
+	if (src.fail())
+	{
+		std::cout << "Can't find multiplayerL.dll" << std::endl;
+		system("pause");
+		return 0;
+	}
+
 	std::ofstream file("C:/RAGEMP/multiplayerL.dll", std::ios::binary);
-	file.write((char*)&SegmentData, 17660928);
+	file << src.rdbuf();
 	file.close();
 
 	std::cout << "DLL patched! Waiting for GTA5..." << std::endl;
@@ -56,7 +64,7 @@ int main()
 		std::cout << "exec file name: ";
 		std::cin >> fileName;
 
-		std::ifstream ifs("C:/altv-hack/" + fileName);
+		std::ifstream ifs("C:/rage-exec/" + fileName);
 
 		if (ifs)
 			std::getline(ifs, execstr, '\0');
@@ -74,7 +82,7 @@ int main()
 
 		char path[MAX_PATH];
 		GetCurrentDirectoryA(MAX_PATH, path);
-		strcat_s(path, MAX_PATH, "\\soulcheats.dll");
+		strcat_s(path, MAX_PATH, "\\rage-exec.dll");
 
 		ManualMap(hProc, path);
 		CloseHandle(hProc);
