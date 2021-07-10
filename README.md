@@ -18,7 +18,7 @@ Navigate to the cloned folder and open `rage-exec.sln` with Visual Studio, and b
 
 1) Start RAGE Multiplayer Launcher
 2) Start rage-inj.exe
-3) Connect to a server
+3) Connect to a server (should be **0.3.7** or else it won't work)
 4) Wait for GTA5 to pop up and start loading
 5) Type in the file to execute into the **rage-inj.exe** console
 6) Wait for RAGEMP to load and it will be executed
